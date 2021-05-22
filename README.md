@@ -33,3 +33,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 * [RASPBERRY PI TOUCHSCREEN KIOSK SETUP (10 STEPS)](https://desertbot.io/blog/raspberry-pi-touchscreen-kiosk-setup)
 * [Angular Development with Docker](https://markfknight.dev/posts/angular-in-docker/)
+* [Raspberry Pi 7'' Touchscreen Display](https://www.element14.com/community/docs/DOC-78156/l/raspberry-pi-7-touchscreen-display)
+* [Rotate LCD](https://maker-tutorials.com/raspberry-pi-touchscreen-installieren-und-anschliessen-tipps-tricks/)
