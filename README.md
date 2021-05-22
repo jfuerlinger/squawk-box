@@ -1,5 +1,7 @@
 # Squawk Box
 
+[![Azure Static Web Apps CI/CD](https://github.com/jfuerlinger/squawk-box/actions/workflows/build-and-deploy.yml/badge.svg?branch=main)](https://github.com/jfuerlinger/squawk-box/actions/workflows/build-and-deploy.yml)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
 
 The purpose is to implement a squawk box on base of Azure communication services on a raspberry pi 4 with an 7'' touchscreen display.
