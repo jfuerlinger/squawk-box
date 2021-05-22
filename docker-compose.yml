@@ -3,7 +3,10 @@ version: '3.7'
 services:
   squawk-box:
     build: .
-    command: echo 'ready'
+    command: sh -c "npm start"
+    ports: 
+      - 4200:4200
+    working_dir: /home/node/squawk-box
     volumes:
       - ./:/home/node/squawk-box
       - node_modules:/home/node/squawk-box/node_modules

@@ -4,3 +4,6 @@ RUN mkdir /home/node/squawk-box && chown node:node /home/node/squawk-box
 RUN mkdir /home/node/squawk-box/node_modules && chown node:node /home/node/squawk-box/node_modules
 WORKDIR  /home/node/squawk-box
 USER node
+COPY --chown=node:node package.json package-lock.json ./
+RUN npm ci --quiet
+COPY --chown=node:node . .
