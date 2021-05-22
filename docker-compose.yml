@@ -5,7 +5,7 @@ services:
     build: .
     command: echo 'ready'
     volumes:
-      - ./:/home/node/app
-      - node_modules:/home/node/app/node_modules
+      - ./:/home/node/squawk-box
+      - node_modules:/home/node/squawk-box/node_modules
 volumes:
   node_modules:

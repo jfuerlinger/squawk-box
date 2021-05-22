@@ -1,6 +1,6 @@
 # Dockerfile
 FROM node:lts
-RUN mkdir /home/node/app && chown node:node /home/node/app
-RUN mkdir /home/node/app/node_modules && chown node:node /home/node/app/node_modules
-WORKDIR  /home/node/app
+RUN mkdir /home/node/squawk-box && chown node:node /home/node/squawk-box
+RUN mkdir /home/node/squawk-box/node_modules && chown node:node /home/node/squawk-box/node_modules
+WORKDIR  /home/node/squawk-box
 USER node
