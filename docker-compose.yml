@@ -1,14 +1,12 @@
 # docker-compose
-version: '3.7'
+version: '3'
 services:
-  squawk-box:
+  squawkbox:
     build: .
-    command: sh -c "npm start"
     ports: 
       - 4200:4200
-    working_dir: /home/node/squawk-box
     volumes:
-      - ./:/home/node/squawk-box
-      - node_modules:/home/node/squawk-box/node_modules
+      - ./:/home/node/squawkbox
+      - node_modules:/home/node/squawkbox/node_modules
 volumes:
   node_modules:

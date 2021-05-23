@@ -1,9 +1,9 @@
 {
-  "name": "squawk-box",
+  "name": "squawkbox",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 0.0.0.0",
+    "start": "ng serve --host 0.0.0.0 --poll=1000",
     "build": "ng build",
     "build-prod": "ng build --prod",
     "watch": "ng build --watch --configuration development",

@@ -5,7 +5,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 The purpose is to implement a squawk box on base of Azure communication services on a raspberry pi 4 with an 7'' touchscreen display.
 
 
+
+
 ## Development server
+
+Increase limit of filesystem watchers when using WSL2 Ubuntu on the docker host:
+`echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf`
 
 Run `$ docker compose up -d` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
