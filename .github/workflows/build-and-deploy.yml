@@ -4,12 +4,10 @@ on:
   push:
     branches:
       - main
-      - react-implementation
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
-      - react-implementation
 
 jobs:
   build_and_deploy_job:
