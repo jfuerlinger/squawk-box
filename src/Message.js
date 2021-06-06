@@ -12,11 +12,10 @@ class Message extends React.Component {
     }
   
     componentDidMount() {
-      fetch("/api/message?name=Joe")
+      fetch("/api/getAllProducts?name=Joe")
         .then(res => res.text())
         .then(
           (text) => {
-              debugger;
             this.setState({
               isLoaded: true,
               message: text
