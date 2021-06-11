@@ -5,7 +5,7 @@ import { RemoteParticipantState } from '@azure/communication-calling';
 interface Event {
   participantId: string;
   timeStamp: number;
-  process: Function;
+  process: any;
 }
 
 class AudioChangedEvent implements Event {

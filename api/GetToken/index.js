@@ -13,8 +13,9 @@ module.exports = async function (context, req) {
 
     // Issue an access token with the "voip" scope for an identity
     let tokenResponse = await identityClient.getToken(identityResponse, ["voip"]);
-    const { token, expiresOn } = tokenResponse;
-    
+    console.log(tokenResponse);
+    const { token, expiresOn, communicationUserId } = tokenResponse;
+
     console.log(`\nIssued an access token with 'voip' scope that expires at ${tokenResponse.expiresOn}:`);
     console.log(tokenResponse.token);
 
@@ -22,7 +23,10 @@ module.exports = async function (context, req) {
         status: 200, /* Defaults to 200 */
         body: {
             token: token,
-            expiresOn: expiresOn
+            expiresOn: expiresOn,
+            user: {
+                communicationUserId: communicationUserId
+            }
         }
     };
 }

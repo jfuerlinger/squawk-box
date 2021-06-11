@@ -9,14 +9,15 @@ export const utils = {
     return window.location.origin;
   },
   getTokenForUser: async (): Promise<CommunicationUserToken> => {
-    const response = await fetch('/token');
+    const response = await fetch('/api/gettoken');
+    console.log(response);
     if (response.ok) {
       return response.json();
     }
     throw new Error('Invalid token response');
   },
   getRefreshedTokenForUser: async (identity: string): Promise<string> => {
-    const response = await fetch(`/refreshToken/${identity}`);
+    const response = await fetch(`/api/refreshToken/${identity}`);
     if (response.ok) {
       const content = await response.json();
       return content.token;

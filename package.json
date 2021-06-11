@@ -40,18 +40,41 @@
     "uuid": "^8.3.2",
     "y18n": "^5.0.8"
   },
+  "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "ajv": "^6.12.6",
+    "cross-env": "^5.2.0",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "^4.7.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "nan": "^2.14.2",
+    "prettier": "2.0.5",
+    "typescript": "^3.9.7"
+  },
   "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-scripts start",
     "swa-start": "concurrently \"cd api && npm run start\" \"npm run start\" \"swa start http://localhost:3000 --api=http://localhost:7071\"",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "cross-env CI=true react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "prettier": "prettier --write --config .prettierrc **/*.js **/*.ts **/*.tsx",
+    "prettier:check": "prettier --check --config .prettierrc **/*.js **/*.ts **/*.tsx",
+    "lint": "eslint -c package.json */**/*.{ts,tsx} && echo Lint completed.",
+    "lint:quiet": "eslint -c package.json */**/*.{ts,tsx} --quiet && echo Lint completed."
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "react/display-name": 0
+    }
   },
   "browserslist": {
     "production": [
