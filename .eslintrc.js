@@ -17,6 +17,7 @@ module.exports = {
   rules: {
     'react/display-name': 'off',
     '@typescript-eslint/no-var-requires': 0,
-    '@typescript-eslint/no-explicit-any': 0
+    '@typescript-eslint/no-explicit-any': 0,
+    '@typescript-eslint/no-unused-vars': 0
   }
 };
