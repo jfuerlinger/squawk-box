@@ -2,6 +2,7 @@ const { CommunicationIdentityClient } = require('@azure/communication-identity')
 
 module.exports = async function (context, req) {
     context.log('Azure Communication Services - Get Token');
+    console.log(req);
 
     const connectionString = process.env['COMMUNICATION_SERVICES_CONNECTION_STRING'];
 
