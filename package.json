@@ -52,13 +52,14 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
     "nan": "^2.14.2",
+    "opener": "^1.5.2",
     "prettier": "2.0.5",
     "typescript": "^3.9.7"
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-scripts start",
-    "swa-start": "concurrently \"cd api && npm run start\" \"npm run start\" \"swa start http://localhost:3000 --api=http://localhost:7071\"",
+    "swa-start": "concurrently \"cd api && npm run start\" \"npm run start\" \"swa start http://localhost:3000 --api=http://localhost:7071\" \"opener https://localhost:4280\"",
     "build": "react-scripts build",
     "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
