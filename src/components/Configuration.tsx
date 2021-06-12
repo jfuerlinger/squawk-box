@@ -71,7 +71,16 @@ export default (props: ConfigurationScreenProps): JSX.Element => {
   const spinnerLabel = 'Initializing call client...';
   const buttonText = 'Start call';
 
-  const createUserId = (): string => 'user' + Math.ceil(Math.random() * 1000);
+  const getNameFromUrl = (): string | null => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('name');
+  };
+
+  const createUserId = (): string => {
+    const nameFromUrl = getNameFromUrl();
+    const displayName : string = nameFromUrl == null || nameFromUrl === '' ? 'user' + Math.ceil(Math.random() * 1000) : nameFromUrl;
+    return displayName;
+  };
 
   const [name, setName] = useState(createUserId());
   const [emptyWarning, setEmptyWarning] = useState(false);
