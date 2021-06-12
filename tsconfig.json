@@ -1,30 +1,60 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+    "target": "es6",
+    "module": "esnext",
+    "jsx": "react",
+    "declaration": true,
+    "declarationMap": true,
     "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
+    "outDir": "./dist/",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictFunctionTypes": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
     "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
+    "emitDecoratorMetadata": true,
     "lib": [
-      "es2018",
-      "dom"
-    ]
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
-  }
+  "typedocOptions": {
+    "mode": "files",
+    "inputFiles": [
+      "./dist/publicSDK.d.ts"
+    ],
+    "out": "docs/typedoc",
+    "includeDeclarations": true,
+    "excludeExternals": true,
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "ignoreCompilerErrors": true,
+    "stripInternal": true,
+    "excludeNotExported": true,
+    "name": "Squawk Box",
+    "readme": "none"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
