@@ -87,6 +87,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+## Commands for audio
+
+### Record audio file
+
+```sh
+arecord -D plughw:2,0 -d 3 -f cd test.wav
+```
+
+### Play audio file
+
+```sh
+aplay -D plughw:Headphones,0  test.wav
+```
+
+
 ## Resources
 
 * [RASPBERRY PI TOUCHSCREEN KIOSK SETUP (10 STEPS)](https://desertbot.io/blog/raspberry-pi-touchscreen-kiosk-setup)
