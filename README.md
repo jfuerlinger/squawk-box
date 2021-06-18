@@ -110,3 +110,4 @@ aplay -D plughw:Headphones,0  test.wav
 * [Angular Development with Docker](https://markfknight.dev/posts/angular-in-docker/)
 * [Raspberry Pi 7'' Touchscreen Display](https://www.element14.com/community/docs/DOC-78156/l/raspberry-pi-7-touchscreen-display)
 * [Rotate LCD](https://maker-tutorials.com/raspberry-pi-touchscreen-installieren-und-anschliessen-tipps-tricks/)
+* [Raspberry PI 4 - Pinout](https://www.theengineeringprojects.com/wp-content/uploads/2021/03/raspberry-pi-4.png)
