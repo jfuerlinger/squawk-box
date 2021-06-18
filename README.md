@@ -2,11 +2,13 @@
 
 [![Azure Static Web Apps CI/CD](https://github.com/jfuerlinger/squawk-box/actions/workflows/build-and-deploy.yml/badge.svg?branch=main)](https://github.com/jfuerlinger/squawk-box/actions/workflows/build-and-deploy.yml)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
-
 The purpose is to implement a squawk box on base of Azure communication services on a raspberry pi 4 with an 7'' touchscreen display.
 
+To join the session run the following URL
 
+```
+https://calm-sky-0226bb303.azurestaticapps.net/?groupId=7e723f30-ce89-11eb-bea5-ef058edc4a13&name=<name>
+```
 
 
 ## Development server
